@@ -1,7 +1,6 @@
 //dependencies 
 var express = require("express");
 var bodyParser = require("body-parser"); 
-var path = require('path');
 
 //express server setup
 var app = express();
@@ -10,9 +9,9 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
 //routes
-require("./app/routing/apiRoutes")(app);
+// require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
-require("./app/data/friends")(app);
+// require("./app/data/friends")(app);
 
 //start server
 app.listen(PORT, function() {
