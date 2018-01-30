@@ -1,6 +1,7 @@
 //dependencies
 var path = require('path');
 
+//export routes to pass into express
 module.exports = function(app) {
     
     //home route
