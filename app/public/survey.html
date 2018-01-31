@@ -270,10 +270,10 @@
         //error checking
         // console.log(newSurvey);
 
-        $.post("/api/new", newSurvey)
-          .done(function(data) {
-            console.log(data);
-            // alert("Adding character...");
+        $.post("/api/new", newSurvey, function(data) {
+
+
+            
         });
       });
 
