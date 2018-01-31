@@ -5,11 +5,11 @@ var bodyParser = require("body-parser");
 //express server setup
 var app = express();
 var PORT = process.env.PORT || 8000;  //heroku port or local 8000
-app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(bodyParser.json());
 
 //routes
-// require("./app/routing/apiRoutes")(app);
+require("./app/routing/apiRoutes")(app);
 require("./app/routing/htmlRoutes")(app);
 // require("./app/data/friends")(app);
 
