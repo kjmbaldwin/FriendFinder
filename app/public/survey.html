@@ -254,7 +254,7 @@
       $('#survey-submit-btn').on('click', function(event){
         event.preventDefault();
     
-        $(".modal").addClass("is-active");
+        
         
         var scoresArray = [];
         for (let index = 1; index < 11; index++) {
@@ -272,8 +272,16 @@
 
         $.post("/api/new", newSurvey, function(data) {
 
+          console.log("Your best friend: ", data);
+            var name = data.name;
+            var photo = data.photo;
 
-            
+            $(".modal-card-body").html(
+              "<h1>" + name + "</h1>" +
+              "<img src=\"" + photo + "\" />"
+            );
+
+            $(".modal").addClass("is-active");
         });
       });
 
